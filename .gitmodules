@@ -1,0 +1,3 @@
+[submodule "repbridge/lib/forge-std"]
+	path = repbridge/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
