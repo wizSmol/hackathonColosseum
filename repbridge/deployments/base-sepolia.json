@@ -1,0 +1,14 @@
+{
+  "network": "base-sepolia",
+  "chainId": 84532,
+  "deployedAt": "2026-02-06T21:31:00Z",
+  "contracts": {
+    "MockRegistry": "0x02FEA123Dde4561cdA0dd08D4Cf26d5b37Cc095C",
+    "RepBridgeDispatcher": "0xe86D40775F4F6394742C091E83829ad334Da7c45"
+  },
+  "hyperlane": {
+    "mailbox": "0x6966b0E55883d49BFB24539356a2f8A673E02039"
+  },
+  "deployer": "0xC44b378d35e7A171eD43E95851e53971b112B176",
+  "txHash": "see broadcast/Deploy.s.sol/84532/run-latest.json"
+}
