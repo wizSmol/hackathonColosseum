@@ -39,8 +39,9 @@ const DISPATCHER_ABI = [
 // Solana domain ID in Hyperlane
 const SOLANA_DOMAIN = 1399811149;
 
-// Placeholder - will be deployed contract address
-const DISPATCHER_ADDRESS = '0x0000000000000000000000000000000000000000' as `0x${string}`;
+// Deployed contract addresses (Base Sepolia)
+const DISPATCHER_ADDRESS = '0xe86D40775F4F6394742C091E83829ad334Da7c45' as `0x${string}`;
+const MOCK_REGISTRY_ADDRESS = '0x02FEA123Dde4561cdA0dd08D4Cf26d5b37Cc095C' as `0x${string}`;
 
 export default function Home() {
   const { address, isConnected } = useAccount();
