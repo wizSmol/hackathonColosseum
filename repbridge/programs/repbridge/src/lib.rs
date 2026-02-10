@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("RepBRiDGE1111111111111111111111111111111111");
+declare_id!("CTqxMTPmzGfinjc5oDZna7NnyeBuzENLzxFttincvezK");
 
 /// RepBridge Solana Program
 /// Receives cross-chain reputation attestations via Hyperlane
@@ -22,7 +22,7 @@ pub mod repbridge {
     pub fn handle_message(
         ctx: Context<HandleMessage>,
         origin: u32,           // Source domain ID
-        sender: [u8; 32],      // Sender address on source chain
+        _sender: [u8; 32],      // Sender address on source chain
         message: Vec<u8>,      // Encoded ReputationAttestation
     ) -> Result<()> {
         let state = &ctx.accounts.program_state;
@@ -65,7 +65,7 @@ pub mod repbridge {
         state.total_bridged += 1;
 
         emit!(ReputationBridged {
-            source_agent: attestation.agent,
+            source_agent: bridged_rep.source_agent.clone(),
             score: attestation.score,
             source_chain: origin,
             nonce: attestation.nonce,
@@ -80,7 +80,7 @@ pub mod repbridge {
         require!(rep.is_initialized, RepBridgeError::NotFound);
 
         Ok(BridgedReputationData {
-            source_agent: rep.source_agent,
+            source_agent: rep.source_agent.clone(),
             score: rep.score,
             source_chain: rep.source_chain,
             timestamp: rep.timestamp,

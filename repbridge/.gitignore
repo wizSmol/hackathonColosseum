@@ -1,0 +1,19 @@
+# Rust/Anchor
+target/
+Cargo.lock
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Foundry
+cache/
+out/
+broadcast/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store

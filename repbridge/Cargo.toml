@@ -1,0 +1,9 @@
+[workspace]
+members = ["programs/repbridge"]
+resolver = "2"
+
+[workspace.metadata.anchor]
+version = "0.31.1"
+
+[profile.release]
+overflow-checks = true
